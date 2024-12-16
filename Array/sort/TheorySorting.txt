@@ -1,0 +1,89 @@
+Insertion Sort :- 
+arr[6] :- 9 8 7 6 5 4 
+
+    9|8 7 6 5 4 
+    8 9|7 6 5 4 
+    7 8 9|6 5 4
+    6 7 8 9|5 4 
+    5 6 7 8 9|4 
+    4 5 6 7 8 9
+
+arr[5] :- 12 43 4 5 3 
+
+    12|43 4 5 3
+    12 43|4 5 3
+    4  12 43|5 3
+    4 5 12 43| 3
+    3 4 5 12 43 
+
+
+BubbleSort :- 
+
+arr[6] :- 9 8 7 6 5 4
+pass 1
+    9 8 7 6 5 4 
+    8 9 7 6 5 4
+    8 7 9 6 5 4
+    8 7 6 9 5 4 
+    8 7 6 5 9 4
+    8 7 6 5 4 9
+
+pass 2 
+    8 7 6 5 4 9
+    7 8 6 5 4 9
+    7 6 8 5 4 9
+    7 6 5 8 4 9
+    7 6 5 4 8 9
+
+pass 3 
+    7 6 5 4 8 9 
+    6 7 5 4 8 9
+    6 5 7 4 8 9
+    6 5 4 7 8 9
+
+pass 4 
+    6 5 4 7 8 9
+    5 6 4 7 8 9
+    5 4 6 7 8 9
+
+pass 5 
+    5 4 6 7 8 9
+    4 5 6 7 8 9
+
+
+Selection Sort :- 
+
+arr[6] :- 9 8 7 6 5 4
+    9 8 7 6 5 4 
+    4 8 7 6 5 9
+    4 5 7 6 8 9
+    4 5 6 7 8 9
+
+
+
+
+
+
+
+    Here's a simple C++ implementation of the Shell sort algorithm, followed by an explanation:
+
+cpp
+#include <iostream>
+using namespace std;
+
+// Function to perform Shell Sort
+void shellSort(int arr[], int n) {
+    // Start with a big gap, then reduce the gap
+    for (int gap = n / 2; gap > 0; gap /= 2) {
+        // Do a gapped insertion sort for this gap size
+        for (int i = gap; i < n; i++) {
+            int temp = arr[i]; // store the element at i
+            int j;
+            // Shift earlier gap-sorted elements up until the correct location for arr[i] is found
+            for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) {
+                arr[j] = arr[j - gap]; // move element up
+            }
+            arr[j] = temp; // place temp at its correct location
+        }
+    }
+}

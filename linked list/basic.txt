@@ -1,0 +1,31 @@
+linked list :- it is a linear data structure that |store collection of nodes|
+     
+                    data|next node address
+
+Ex :-
+
+3|* ->   5|*  ->    7|*   ->  9|*  (* is null)
+
+*) dynamic data structure  (grow/shrink run time )
+*)  no memory wastage 
+*)  
+
+5|710   8|810  12|910  13|       <<-null 
+d|a     d|a    d|a      d|a   
+
+types of linked list :-
+
+1]  singly linked list :-  is the linear collection of data 
+item called node where each node has derived into two part
+
+data || address
+1]     y 2      [y|2] -> [a|3] -> [s|4] -> [h|null]    
+2]     a 3      
+3]     s 4  
+4]     h null
+
+2] doubly linked list
+ 
+ previous-add|data|next-add
+
+    null|1|next -> temp-prev|2|null

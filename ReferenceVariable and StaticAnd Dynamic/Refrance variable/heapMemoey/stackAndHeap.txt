@@ -1,0 +1,32 @@
+stack memory is compare to _less that heap memory 
+stack memory :-   memory is _static memory allocation
+int a = 3
+int arr[20]
+char ch;
+
+
+
+heap memory :-  
+memory is _dynamic memory allocation 
+new keyword is used to use heap memory 
+syntax :- 
+new char; // this sentence return address
+ex 
+char *ch =  new char    //total line is nine bites 
+//^ 8    +   ^1     = 9
+
+
+difference 
+_static  : -
+syntax :- 
+int arr[5]   4 *5  = 20 bites 
+low memoery
+no need to close or delete memoery externally 
+
+_dynamic :-
+syntax :-
+int* arr = new int[5]   8 + 4 *5 = 28 bites 
+high memory
+need to close or delete memory externally using keyword ------(delete)
+for single integer :-          delete i
+for array          :-          delete []arr
